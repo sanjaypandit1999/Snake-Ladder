@@ -2,7 +2,7 @@ package snakeladder;
 
 import snakeladder.utility.Utility;
 
-public class Snakladderruc5 {
+public class Snakladderruc6 {
     public static void main(String[] args) {
         System.out.println("Welcome to Snake-Ladder Game");
         int player = 0;

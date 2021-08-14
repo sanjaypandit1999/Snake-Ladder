@@ -3,6 +3,7 @@ package snakeladder.utility;
 public class Utility {
     public static int isSnake = 2, isLadder = 1;
     static int option;
+    static int diceRollCount = 0;
 
     //UC2
     public int rollDice() {
@@ -18,9 +19,11 @@ public class Utility {
         if (randomCheck == isLadder) {
             System.out.println("the dice number is " + option);
             newPosition = newPosition + option;
+            diceRollCount++;
         } else if (randomCheck == isSnake) {
             System.out.println("now it is snake");
             newPosition = (newPosition - option);
+            diceRollCount++;
         } else {
             System.out.println(" player is no play");
         }
@@ -35,6 +38,7 @@ public class Utility {
         //doiing for loop for wiining score 100
         for (newPosition = 0; newPosition <= 100; ) {
             newPosition = sc.playerOption(newPosition);//calling snake ladder and no play method
+            diceRollCount++;
             if (newPosition == 100 ){
                 System.out.println("Player won the game");
                 break;
@@ -43,6 +47,7 @@ public class Utility {
             else if (newPosition > 100) {
                 previousPosition = newPosition - option;
                 System.out.println("Back previous position " + previousPosition);
+                diceRollCount++;
                 if (previousPosition == 100) {
                     System.out.println("player won the game");
                 }
@@ -52,6 +57,7 @@ public class Utility {
                 System.out.println("once more rolls the dice");
             }
         }
+        System.out.println("The dice roll count is " +diceRollCount);
         return newPosition;
     }
 }
