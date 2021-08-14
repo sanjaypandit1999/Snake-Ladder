@@ -57,7 +57,6 @@ public class Utility {
                 System.out.println("once more rolls the dice");
             }
         }
-        System.out.println("The dice roll count is " +diceRollCount);
         return newPosition;
     }
 }
